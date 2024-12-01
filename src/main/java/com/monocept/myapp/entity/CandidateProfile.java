@@ -38,7 +38,95 @@ public class CandidateProfile {
     @Min(value = 0, message = "Relevant experience cannot be negative")
     private int relevantExperience;
 
-    @NotBlank(message = "Location cannot be blank")
+    public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getSkill() {
+		return skill;
+	}
+
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+
+	public String getSubSkill() {
+		return subSkill;
+	}
+
+	public void setSubSkill(String subSkill) {
+		this.subSkill = subSkill;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public String getMailId() {
+		return mailId;
+	}
+
+	public void setMailId(String mailId) {
+		this.mailId = mailId;
+	}
+
+	public int getTotalExperience() {
+		return totalExperience;
+	}
+
+	public void setTotalExperience(int totalExperience) {
+		this.totalExperience = totalExperience;
+	}
+
+	public int getRelevantExperience() {
+		return relevantExperience;
+	}
+
+	public void setRelevantExperience(int relevantExperience) {
+		this.relevantExperience = relevantExperience;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+	public String getNoticePeriod() {
+		return noticePeriod;
+	}
+
+	public void setNoticePeriod(String noticePeriod) {
+		this.noticePeriod = noticePeriod;
+	}
+
+	@NotBlank(message = "Location cannot be blank")
     private String location; 
 
     @NotNull(message = "Date is required")

@@ -20,7 +20,55 @@ public class UploadAudit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message="Uploader name cannot be blank")
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUploaderName() {
+		return uploaderName;
+	}
+
+	public void setUploaderName(String uploaderName) {
+		this.uploaderName = uploaderName;
+	}
+
+	public Long getUploaderId() {
+		return uploaderId;
+	}
+
+	public void setUploaderId(Long uploaderId) {
+		this.uploaderId = uploaderId;
+	}
+
+	public LocalDateTime getUploadDateTime() {
+		return uploadDateTime;
+	}
+
+	public void setUploadDateTime(LocalDateTime uploadDateTime) {
+		this.uploadDateTime = uploadDateTime;
+	}
+
+	public int getInsertedRows() {
+		return insertedRows;
+	}
+
+	public void setInsertedRows(int insertedRows) {
+		this.insertedRows = insertedRows;
+	}
+
+	public int getSkippedRows() {
+		return skippedRows;
+	}
+
+	public void setSkippedRows(int skippedRows) {
+		this.skippedRows = skippedRows;
+	}
+
+	@NotBlank(message="Uploader name cannot be blank")
     private String uploaderName;
 
     @NotNull(message="Uploader ID cannot be null")
